@@ -7,7 +7,7 @@ Deployment-ready **Microsoft Remote Help** installer, provided as both the stand
 ```
 .
 ├── exe/
-│   └── remotehelpinstaller_0f48caedb8c83275a11f97bf3bfa539a383fb499.exe        # raw installer
+│   └── remotehelpinstaller.exe                                                 # raw installer
 ├── intunewin/
 │   └── remotehelpinstaller_0f48caedb8c83275a11f97bf3bfa539a383fb499.intunewin  # Win32 app package (upload this)
 └── Images/                                                                     # step-by-step screenshots
@@ -42,6 +42,8 @@ In the [Microsoft Intune admin center](https://intune.microsoft.com): **Apps →
 | Uninstall command | `remotehelpinstaller_0f48caedb8c83275a11f97bf3bfa539a383fb499.exe /uninstall /quiet acceptTerms=1` |
 | Install behavior | System |
 | Device restart behavior | App install may force a device restart |
+
+> The install/uninstall commands reference `remotehelpinstaller_0f48caedb8c83275a11f97bf3bfa539a383fb499.exe` — this is the setup file **inside** the `.intunewin` package (as shown in the screenshots), not the shortened `remotehelpinstaller.exe` stored in the `exe/` folder of this repo.
 
 **Return codes**
 
